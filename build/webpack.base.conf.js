@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-06-23 23:13:07
+ * @LastEditTime: 2020-06-27 00:13:54
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /icesium/build/webpack.base.conf.js
+ */ 
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -33,6 +41,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'img': resolve('src/assets'),
       'cesium': path.resolve(__dirname, cesiumSource), //在resolve中设置cesium别名
     }
   },
@@ -71,6 +80,10 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
       }
     ],
     unknownContextCritical: false

@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-06-23 23:13:07
+ * @LastEditTime: 2020-06-26 22:41:59
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /icesium/src/main.js
+ */ 
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
@@ -15,7 +23,8 @@ Vue.prototype.$echarts = myCharts
 
 Vue.prototype.Cesium = Cesium
 Vue.prototype.widgets = widgets
-require('./mock')
+// require('./mock')
+import Mock from '@/mock'
 
 Vue.config.productionTip = false
 

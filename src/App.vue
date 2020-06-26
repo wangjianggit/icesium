@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-23 23:13:07
+ * @LastEditTime: 2020-06-26 23:50:50
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /icesium/src/App.vue
+--> 
 <template>
   <div id="app">
     <router-view/>
@@ -12,10 +20,6 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  height: 100%;
 }
 </style>
