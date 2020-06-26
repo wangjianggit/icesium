@@ -5,12 +5,17 @@ import App from './App'
 import router from './router'
 let Cesium = require('cesium/Cesium')
 import widgets from 'cesium/Widgets/widgets.css'
- 
+
+import axios from './utils/http'
+Vue.prototype.$axios = axios
+
+import myCharts  from "echarts";
+Vue.prototype.$echarts = myCharts
+
+
 Vue.prototype.Cesium = Cesium
 Vue.prototype.widgets = widgets
-if (process.env.MOCK) {    // 判断是否为mock模式
-  require('./mock/index.js')
-}
+require('./mock')
 
 Vue.config.productionTip = false
 

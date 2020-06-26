@@ -1,14 +1,24 @@
-/*
- * @Description: 引入mock.js及配置文件
- * @Author: MrGao
- * @LastEditors: Please set LastEditors
- * @Date: 2019-03-12 10:35:08
- * @LastEditTime: 2019-03-12 10:54:20
- */
+// 首先引入Mock
+const Mock = require('mockjs');
 
-import Mock from 'mockjs'
-import User from './user'
+// 设置拦截ajax请求的相应时间
+Mock.setup({
+  timeout: '200-600'
+});
 
-Mock.mock('/root/login/checkMemberLogin', 'post', () => {  // 此处会劫持/root/login/checkMemberLogin接口，并返回数据
-  return User.userInfo  // 返回模拟数据
-})
+let configArray = [];
+
+// 使用webpack的require.context()遍历所有mock文件
+const files = require.context('.', true, /\.js$/);
+files.keys().forEach((key) => {
+  if (key === './index.js') return;
+  configArray = configArray.concat(files(key).default);
+});
+
+// 注册所有的mock服务
+configArray.forEach((item) => {
+  for (let [path, target] of Object.entries(item)) {
+    let protocol = path.split('|');
+    Mock.mock(new RegExp('^' + protocol[1]), protocol[0], target);
+  }
+});

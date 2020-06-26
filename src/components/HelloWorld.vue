@@ -13,14 +13,17 @@ export default {
     }
   },
   mounted() {
-    var Cesium = this.Cesium;
-    var cesiumContainer = document.getElementById("cesiumContainer");
-    var viewer = new Cesium.Viewer("cesiumContainer",{
-      //加载在线谷歌地图
-      imageryProvider: new Cesium.UrlTemplateImageryProvider({
-         url:"http://www.google.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}"
-      })
-    })
+//     var Cesium = this.Cesium;
+//     var cesiumContainer = document.getElementById("cesiumContainer");
+//     var viewer = new Cesium.Viewer("cesiumContainer",{
+//       //加载在线谷歌地图
+//       imageryProvider: new Cesium.UrlTemplateImageryProvider({
+//          url:"http://www.google.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}"
+//       })
+//     })
+    this.$axios.get('/parameter/query', {}).then(res => {
+      console.log(res)
+    })
   }
 }
 </script>
