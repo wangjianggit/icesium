@@ -1,8 +1,10 @@
-export default [
-  {
+export default [{
     path: '/',
     name: 'home',
-    components: require('@/page/index.vue')
+    components: require('@/page/index.vue'),
+    meta: {
+      index: 2
+    }
   },
-  
+
 ]

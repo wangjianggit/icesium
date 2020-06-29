@@ -1,7 +1,9 @@
 import Mock from 'mockjs'
-import User from './user'
+// import User from './user'
+import api from '@/api'
  
 export default {
-  User,
-  Mock
+  // User,
+  Mock,
+  api
 }
