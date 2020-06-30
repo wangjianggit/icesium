@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.0",
+    "ant-design-vue": "^1.6.2",
     "cesium": "^1.70.1",
     "echarts": "^4.8.0",
     "iview": "^3.5.4",

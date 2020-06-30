@@ -1,17 +1,16 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-23 23:13:07
- * @LastEditTime: 2020-06-28 20:21:24
+ * @LastEditTime: 2020-06-30 16:27:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /icesium/src/App.vue
 --> 
 <template>
   <div id="app">
-    <transition :name="transitionName">
+    <!-- <transition :name="transitionName"> -->
       <router-view class="view"></router-view>
-    </transition>
-    <!-- <router-view /> -->
+    <!-- </transition> -->
   </div>
 </template>
 
