@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-26 14:55:34
+ * @LastEditTime: 2020-07-15 17:46:17
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /icesium/src/components/app-echarts/chart.vue
+--> 
 <template>
   <div class="chart-wrapper">
     <div ref="echarts" :id="id" :data="data" :style="{height: styleHeight}"></div>
@@ -52,6 +60,9 @@ export default {
         vm.chartObj.resize();
       });
       return echarts.init(chart);
+    },
+    returnInstance(id) {
+      return this.$echarts.init(document.getElementById(id))
     }
   },
   beforeDestroy() {

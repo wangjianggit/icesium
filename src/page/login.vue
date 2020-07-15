@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-26 21:55:32
- * @LastEditTime: 2020-06-28 20:13:29
+ * @LastEditTime: 2020-07-15 19:35:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /icesium/src/page/index.vue
@@ -54,6 +54,7 @@ export default {
   },
   methods: {
     handleSubmit() {
+      return
       this.$refs.formInline.validate(valid => {
         if (valid) {
           this.$store.dispatch('Login', this.formInline).then(res => {

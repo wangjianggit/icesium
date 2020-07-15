@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-23 23:13:07
- * @LastEditTime: 2020-06-26 23:33:50
+ * @LastEditTime: 2020-06-30 17:10:36
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /icesium/src/router/index.js
@@ -30,6 +30,7 @@ import Router from 'vue-router'
 
 import common from "./module/common" // 公共路由模块
 import home from "./module/home" // 主页
+import modules from "./module/modules" // 主页
 
 Vue.use(Router)
 
@@ -39,6 +40,7 @@ export default new Router({
   routes: [
     ...home,
     ...common,
+    ...modules,
   ]
 })
 
