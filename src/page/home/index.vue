@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-30 16:37:44
- * @LastEditTime: 2020-07-18 17:04:25
+ * @LastEditTime: 2020-07-18 19:13:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /icesium/src/page/cesium/index.vue
@@ -71,7 +71,7 @@ export default {
   width: 100%;
   height: 100%;
   background: #0a1631 url("~img/common/bg.png") 0 0 / 100% 100% no-repeat;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   justify-content: space-between;
   .content {
